@@ -1,0 +1,36 @@
+# Зависимости
+node_modules/
+npm-debug.log
+package-lock.json
+yarn.lock
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Системные файлы
+Thumbs.db
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+
+# Редакторы
+*.sublime-workspace
+
+# Временные файлы
+*.tmp
+*.bak
+*.backup
+
+# Логи
+*.log
+
+# Среды
+.env
+.env.local

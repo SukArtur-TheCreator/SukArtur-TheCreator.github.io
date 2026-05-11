@@ -1,0 +1,25 @@
+# GitHub Pages Configuration
+theme: jekyll-theme-minimal
+title: ArturBet - Спортивная школа тренера
+description: Портфолио профессионального тренера с современными методиками
+
+# Site Settings
+author: Тренер
+email: trainer@ArturBet.ru
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# Exclude files/folders from processing
+exclude:
+  - .gitignore
+  - .DS_Store
+  - *.md
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArturBet - Кикбоксинг школа</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <svg class="visually-hidden" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+        <symbol id="icon-glove" viewBox="0 0 24 24">
+            <path d="M8 6.5A3.5 3.5 0 0 1 11.5 3h1A3.5 3.5 0 0 1 16 6.5V8h.5A2.5 2.5 0 0 1 19 10.5V14a6 6 0 0 1-6 6h-3a6 6 0 0 1-6-6v-3.5A2.5 2.5 0 0 1 6.5 8H8V6.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+            <path d="M9.5 9v10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            <path d="M13 8.5v10.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="icon-target" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.7"/>
+            <circle cx="12" cy="12" r="3" fill="none" stroke="currentColor" stroke-width="1.7"/>
+            <path d="M12 2.5v3M21.5 12h-3M12 18.5v3M2.5 12h3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="icon-punch" viewBox="0 0 24 24">
+            <path d="M7 14.5v-4.2a2.3 2.3 0 0 1 4.6 0v.7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            <path d="M11.6 11v-1.6a2.2 2.2 0 0 1 4.4 0v2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            <path d="M16 11.4v-.8a2.1 2.1 0 0 1 4.2 0v3.8a7.5 7.5 0 0 1-7.5 7.5H10a5 5 0 0 1-5-5v-2.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-kick" viewBox="0 0 24 24">
+            <path d="M10 5.2a2.2 2.2 0 1 1 4.4 0 2.2 2.2 0 0 1-4.4 0Z" fill="none" stroke="currentColor" stroke-width="1.7"/>
+            <path d="M11.5 8.5 8 13.2l-3.2 1.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 8.8 16 13l4.8 1.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7.6 21.5 9 14.3l3.3-1.2 3.8 1.1 2.6 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-speed" viewBox="0 0 24 24">
+            <path d="M4 14.5a8 8 0 1 1 16 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            <path d="M12 12l4.5-4.5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            <path d="M3 18h18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="icon-shield" viewBox="0 0 24 24">
+            <path d="M12 3.5 19 6v5.2c0 4.5-2.8 8.5-7 9.8-4.2-1.3-7-5.3-7-9.8V6l7-2.5Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+            <path d="m9 12 2 2 4-4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-group" viewBox="0 0 24 24">
+            <path d="M7 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" fill="none" stroke="currentColor" stroke-width="1.7"/>
+            <path d="M2.8 19.2A6 6 0 0 1 7 17h10a6 6 0 0 1 4.2 2.2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="icon-timer" viewBox="0 0 24 24">
+            <path d="M9 2h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+            <path d="M12 6a8 8 0 1 1 0 16 8 8 0 0 1 0-16Z" fill="none" stroke="currentColor" stroke-width="1.7"/>
+            <path d="M12 10v4l3 2" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-play" viewBox="0 0 24 24">
+            <path d="M8 5.5v13l11-6.5-11-6.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-phone" viewBox="0 0 24 24">
+            <path d="M8.4 4.5 10 8a1.4 1.4 0 0 1-.4 1.6l-1.5 1.2a14 14 0 0 0 5.1 5.1l1.2-1.5a1.4 1.4 0 0 1 1.6-.4l3.5 1.6a1.5 1.5 0 0 1 .8 1.7c-.4 1.8-1.9 3.1-3.7 3-7.3-.2-13.2-6.1-13.4-13.4-.1-1.8 1.2-3.3 3-3.7a1.5 1.5 0 0 1 1.7.8Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24">
+            <path d="M4 6h16v12H4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+            <path d="m4.5 7 7.5 6 7.5-6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-chat" viewBox="0 0 24 24">
+            <path d="M4 5.5h16v10H10l-4 3v-3H4z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+            <path d="M8 10h8M8 7.5h5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="icon-pin" viewBox="0 0 24 24">
+            <path d="M12 21s5-4.2 5-9a5 5 0 1 0-10 0c0 4.8 5 9 5 9Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="1.8" fill="none" stroke="currentColor" stroke-width="1.7"/>
+        </symbol>
+        <symbol id="icon-check" viewBox="0 0 24 24">
+            <path d="m5 12 4 4 10-10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+    </svg>
+
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <svg class="logo-icon" aria-hidden="true"><use href="#icon-glove"></use></svg>
+                <span>ArturBet</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#hero" class="nav-link">Главная</a></li>
+                <li><a href="#exercises" class="nav-link">Упражнения</a></li>
+                <li><a href="#program" class="nav-link">Программа</a></li>
+                <li><a href="#benefits" class="nav-link">Преимущества</a></li>
+                <li><a href="#contacts" class="nav-link">Контакты</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Героесекция -->
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Кикбоксинг-школа для первых результатов</h1>
+                    <h2 class="tagline"><svg class="inline-icon" aria-hidden="true"><use href="#icon-target"></use></svg><span>Набираю первую мини-группу!</span></h2>
+                    <p class="description">Тренировки по кикбоксингу с акцентом на технику, скорость, выносливость и безопасную работу в стойке. Никакой воды, только понятные связки и чёткий прогресс.</p>
+                    <button class="cta-button" onclick="scrollToContacts()">Записаться на тренировку</button>
+                </div>
+                <div class="hero-images">
+                    <img src="photo_2026-05-08_19-29-49.jpg" alt="Тренер" class="trainer-photo trainer-photo--top">
+                    <img src="photo_2026-05-08_19-30-11.jpg" alt="Тренер 2" class="trainer-photo trainer-photo--center">
+                    <img src="photo_2026-05-08_19-30-13.jpg" alt="Тренер 3" class="trainer-photo trainer-photo--bottom">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Упражнения -->
+    <section id="exercises" class="exercises">
+        <div class="container">
+            <h2 class="section-title"><svg class="section-title-icon" aria-hidden="true"><use href="#icon-glove"></use></svg><span>Удары и связки</span></h2>
+            <p class="section-subtitle">Техника, дистанция и контроль корпуса — база кикбоксинга</p>
+            
+            <div class="exercises-grid">
+                <!-- Упражнение 1 -->
+                <div class="exercise-card">
+                    <div class="exercise-image">
+                        <svg class="exercise-icon" aria-hidden="true"><use href="#icon-speed"></use></svg>
+                    </div>
+                    <h3>Стойка и перемещения</h3>
+                    <div class="exercise-instructions">
+                        <h4>Техника выполнения:</h4>
+                        <ul>
+                            <li>Ставь ноги в устойчивую боевую стойку</li>
+                            <li>Держи подбородок опущенным, локти ближе к корпусу</li>
+                            <li>Двигайся короткими шагами без скрещивания ног</li>
+                            <li>Не заваливайся вперёд при атаке</li>
+                            <li>После шага сразу возвращайся в защиту</li>
+                        </ul>
+                    </div>
+                    <div class="difficulty">База кикбоксинга</div>
+                </div>
+
+                <!-- Упражнение 2 -->
+                <div class="exercise-card">
+                    <div class="exercise-image">
+                        <svg class="exercise-icon" aria-hidden="true"><use href="#icon-punch"></use></svg>
+                    </div>
+                    <h3>Джеб - кросс</h3>
+                    <div class="exercise-instructions">
+                        <h4>Техника выполнения:</h4>
+                        <ul>
+                            <li>Первый удар выкидывай быстро и прямо</li>
+                            <li>Кросс бей через разворот бедра</li>
+                            <li>Не раскрывай подбородок после атаки</li>
+                            <li>Возвращай кулак по той же линии</li>
+                            <li>Работай в ритме 1-2 без лишнего замаха</li>
+                        </ul>
+                    </div>
+                    <div class="difficulty">Ударная связка</div>
+                </div>
+
+                <!-- Упражнение 3 -->
+                <div class="exercise-card">
+                    <div class="exercise-image">
+                        <svg class="exercise-icon" aria-hidden="true"><use href="#icon-kick"></use></svg>
+                    </div>
+                    <h3>Лоу-кик</h3>
+                    <div class="exercise-instructions">
+                        <h4>Техника выполнения:</h4>
+                        <ul>
+                            <li>Поверни опорную стопу и таз в удар</li>
+                            <li>Бей голенью по нижнему уровню</li>
+                            <li>Руки не опускай, корпус держи собранным</li>
+                            <li>Возвращай ногу быстро, без зависания</li>
+                            <li>Не теряй баланс после удара</li>
+                        </ul>
+                    </div>
+                    <div class="difficulty">Работа по ногам</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Программа занятия -->
+    <section id="program" class="program">
+        <div class="container">
+            <h2 class="section-title"><svg class="section-title-icon" aria-hidden="true"><use href="#icon-timer"></use></svg><span>План тренировки</span></h2>
+            <p class="section-subtitle">Формат занятия построен как бой: разогрев, раунд техники, работа и восстановление</p>
+
+            <div class="program-wrapper">
+                <div class="program-info">
+                    <div class="program-card">
+                        <div class="program-header">
+                            <h3>Кикбоксинг для начинающих</h3>
+                            <span class="duration"><svg class="inline-icon" aria-hidden="true"><use href="#icon-timer"></use></svg><span>60 минут</span></span>
+                        </div>
+                        <div class="program-structure">
+                            <div class="phase">
+                                <h4><svg class="inline-icon" aria-hidden="true"><use href="#icon-speed"></use></svg><span>Разогрев (10 минут)</span></h4>
+                                <p>Скакалка, суставная разминка и лёгкая активация корпуса</p>
+                            </div>
+                            <div class="phase">
+                                <h4><svg class="inline-icon" aria-hidden="true"><use href="#icon-punch"></use></svg><span>Основная часть (40 минут)</span></h4>
+                                <ul>
+                                    <li>Работа в стойке и перемещения: 3 раунда</li>
+                                    <li>Джеб-кросс по воздуху и лапам: 4 раунда</li>
+                                    <li>Лоу-кик и защита корпуса: 3 раунда</li>
+                                    <li>Связки 1-2-3 с выходом из линии атаки</li>
+                                </ul>
+                            </div>
+                            <div class="phase">
+                                <h4><svg class="inline-icon" aria-hidden="true"><use href="#icon-shield"></use></svg><span>Заминка (10 минут)</span></h4>
+                                <p>Дыхание, растяжка ног и плечевого пояса, короткий разбор техники</p>
+                            </div>
+                            <div class="benefits-list">
+                                <p><svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg><strong>Скорость удара</strong></p>
+                                <p><svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg><strong>Выносливость</strong></p>
+                                <p><svg class="check-icon" aria-hidden="true"><use href="#icon-check"></use></svg><strong>Контроль дистанции</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="video-container">
+                    <div class="video-placeholder">
+                        <svg class="play-button" aria-hidden="true"><use href="#icon-play"></use></svg>
+                        <p>5-минутный демо-фрагмент тренировки</p>
+                        <small>(Здесь будет встроенное видео с YouTube)</small>
+                    </div>
+                    <div class="video-description">
+                        <h4>Что вы увидите в видео:</h4>
+                        <ul>
+                            <li>Как строится раунд и работа по таймингу</li>
+                            <li>Технику удара и возврат в защиту</li>
+                            <li>Коррекцию ошибок прямо во время упражнения</li>
+                            <li>Темп, дисциплину и бойцовскую атмосферу</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <h2 class="section-title"><svg class="section-title-icon" aria-hidden="true"><use href="#icon-shield"></use></svg><span>Почему кикбоксинг здесь работает</span></h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <svg class="benefit-icon" aria-hidden="true"><use href="#icon-speed"></use></svg>
+                    <h3>Скорость и реакция</h3>
+                    <p>Тренировки строятся так, чтобы ускорять руки, ноги и принятие решений в бою</p>
+                </div>
+                <div class="benefit-card">
+                    <svg class="benefit-icon" aria-hidden="true"><use href="#icon-shield"></use></svg>
+                    <h3>Безопасная техника</h3>
+                    <p>Корректная стойка, защита головы и контроль нагрузки без лишнего риска</p>
+                </div>
+                <div class="benefit-card">
+                    <svg class="benefit-icon" aria-hidden="true"><use href="#icon-target"></use></svg>
+                    <h3>Точный разбор</h3>
+                    <p>Подгоняю технику под твой уровень, чтобы удар становился короче и чище</p>
+                </div>
+                <div class="benefit-card">
+                    <svg class="benefit-icon" aria-hidden="true"><use href="#icon-glove"></use></svg>
+                    <h3>Работа в паре</h3>
+                    <p>Отрабатываем связки, лапы и тайминг так, чтобы тренировка была похожа на реальный бой</p>
+                </div>
+                <div class="benefit-card">
+                    <svg class="benefit-icon" aria-hidden="true"><use href="#icon-group"></use></svg>
+                    <h3>Мини-группа</h3>
+                    <p>Меньше хаоса, больше внимания к каждому и нормальный бойцовский темп</p>
+                </div>
+                <div class="benefit-card">
+                    <svg class="benefit-icon" aria-hidden="true"><use href="#icon-timer"></use></svg>
+                    <h3>Стабильный прогресс</h3>
+                    <p>Каждый раунд и каждая неделя выстроены так, чтобы видеть реальный рост формы</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contacts" class="contacts">
+        <div class="container">
+            <h2 class="section-title"><svg class="section-title-icon" aria-hidden="true"><use href="#icon-phone"></use></svg><span>Связаться со мной</span></h2>
+            <p class="section-subtitle">Отвечу на вопросы и помогу выбрать формат тренировки</p>
+            
+            <div class="contacts-wrapper">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <span class="contact-label"><svg class="inline-icon" aria-hidden="true"><use href="#icon-phone"></use></svg><span>Телефон:</span></span>
+                        <a href="tel:++7 995 090 4297">+7 (995) 090-42-97</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label"><svg class="inline-icon" aria-hidden="true"><use href="#icon-mail"></use></svg><span>Email:</span></span>
+                        <a href="mailto:trainer@ArturBet.ru">trainer@ArturBet.ru</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label"><svg class="inline-icon" aria-hidden="true"><use href="#icon-chat"></use></svg><span>Telegram:</span></span>
+                        <a href="https://t.me/ferydel22" target="_blank">@ferydel22</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label"><svg class="inline-icon" aria-hidden="true"><use href="#icon-pin"></use></svg><span>VK:</span></span>
+                        <a href="https://vk.com/artursuk" target="_blank">vk.com/artursuk</a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <h3>Записаться на пробное занятие</h3>
+                    <input type="text" placeholder="Ваше имя" required>
+                    <input type="email" placeholder="Ваш email" required>
+                    <input type="tel" placeholder="Ваш телефон" required>
+                    <textarea placeholder="Расскажите о себе и своих целях" rows="4" required></textarea>
+                    <button type="submit" class="submit-button">Отправить заявку</button>
+                </form>
+            </div>
+
+            <div class="cta-banner">
+                <h3><svg class="inline-icon" aria-hidden="true"><use href="#icon-target"></use></svg><span>Готов выйти на первый раунд?</span></h3>
+                <p>Первое пробное занятие — бесплатно</p>
+                <button class="cta-button-large" onclick="document.getElementById('contactForm').scrollIntoView({behavior: 'smooth'})">Записаться на пробную тренировку</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 ArturBet. Все права защищены.</p>
+            <p>Спортивная школа профессионального тренера</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
